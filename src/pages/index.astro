@@ -1,0 +1,23 @@
+---
+import booksPublic from "../data/books-public.json";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Pals — Daily Literary Puzzle</title>
+  </head>
+  <body class="min-h-screen bg-[#121214] text-zinc-100 antialiased flex flex-col items-center justify-center p-6">
+    <main class="w-full max-w-md rounded-2xl bg-[#18181b] border border-zinc-800 p-6 shadow-xl text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-blue-400 text-xs font-medium">
+        Cloudflare Pages + Edge Functions Active
+      </div>
+      <h1 class="text-2xl font-bold tracking-tight">📚 Book Pals</h1>
+      <p class="text-sm text-zinc-400">
+        Loaded <span class="text-zinc-100 font-semibold">{booksPublic.length.toLocaleString()}</span> searchable books in the client catalog.
+      </p>
+    </main>
+  </body>
+</html>

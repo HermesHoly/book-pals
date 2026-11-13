@@ -1,0 +1,366 @@
+id,title,author,firstPublishYear,medianPages,primaryGenre,secondaryGenres,authorCountry,isSeries
+1,The 48 Laws of Power,Robert Greene,1998,452,Non-Fiction/Biography,Historical Fiction|Philosophy,United States,false
+2,It Ends With Us,Colleen Hoover,2012,384,Romance,,United States,false
+3,Harry Potter and the Philosopher's Stone,J. K. Rowling,1997,302,Fantasy,Horror|YA,United Kingdom,true
+4,It Starts with Us,Colleen Hoover,2022,344,Romance,Literary Fiction|Classics,United States,false
+5,How to Win Friends and Influence People,Dale Carnegie,1936,283,Non-Fiction/Biography,,United States,false
+6,Twisted Love,Ana Huang,2021,358,Romance,,United States,false
+7,A Game of Thrones,George R. R. Martin,1996,801,Fantasy,Adventure|Sci-Fi,United States,true
+8,Haunting Adeline,H. D. Carlton,2021,624,Romance,Mystery/Thriller|Fantasy,United States,false
+9,It,Stephen King,1986,1168,Horror,Mystery/Thriller|Literary Fiction,United States,false
+10,Pride and Prejudice,Jane Austen,1813,351,Romance,Literary Fiction|Classics,United Kingdom,false
+11,O Alquimista,Paulo Coelho,1988,197,Adventure,,Brazil,false
+12,Icebreaker,Hannah Grace,2020,448,Romance,YA|Literary Fiction,United States,false
+13,Nineteen Eighty-Four,George Orwell,1949,318,Classics,Dystopian|Literary Fiction,United Kingdom,false
+14,A Court of Mist and Fury,Sarah J. Maas,2014,626,Fantasy,Adventure|Romance,United States,true
+15,The Love Hypothesis,Ali Hazelwood,2021,398,Romance,Classics|YA,Italy,false
+16,Shatter Me,Tahereh Mafi,2011,355,Romance,YA|Sci-Fi,United States,false
+17,Can't Hurt Me,David Goggins,2018,364,Non-Fiction/Biography,,United States,false
+18,The Hunger Games,Suzanne Collins,2008,397,Dystopian,YA|Sci-Fi,United States,true
+19,The Lightning Thief,Rick Riordan,2005,384,Fantasy,YA|Adventure,United States,false
+20,Harry Potter and the Chamber of Secrets,J. K. Rowling,1998,339,Fantasy,YA,United Kingdom,true
+21,Fifty Shades of Grey,E. L. James,2000,544,Romance,Non-Fiction/Biography,United Kingdom,false
+22,Ugly Love,Colleen Hoover,2014,344,Romance,,United States,false
+23,Twilight,Stephenie Meyer,2005,498,YA,Horror|Fantasy,United States,true
+24,Wuthering Heights,Emily Brontë,1846,318,Classics,Horror|YA,United Kingdom,false
+25,To Kill a Mockingbird,Harper Lee,1960,320,Literary Fiction,Horror,United States,false
+26,A Good Girl's Guide to Murder,Holly Jackson,2019,432,Mystery/Thriller,YA,Canada,true
+27,Harry Potter and the Prisoner of Azkaban,J. K. Rowling,1999,416,Fantasy,YA|Adventure,United Kingdom,true
+28,Animal Farm,George Orwell,1945,128,Satire,Classics|Dystopian,United Kingdom,false
+29,Harry Potter and the Deathly Hallows,J. K. Rowling,2007,701,Fantasy,YA|Adventure,United Kingdom,true
+30,Sapiens,Yuval Noah Harari,2011,456,Non-Fiction/Biography,Historical Fiction,Israel,false
+31,The Hobbit,J.R.R. Tolkien,1937,310,Fantasy,YA,United Kingdom,true
+32,Alice's Adventures in Wonderland,Lewis Carroll,1865,133,YA,Classics|Adventure,United Kingdom,false
+33,Twisted Lies,Ana Huang,2022,576,Mystery/Thriller,Romance|Classics,United States,false
+34,The Cruel Prince,Holly Black,2018,378,YA,Fantasy|Romance,United States,false
+35,Twisted Games,Ana Huang,2021,454,Romance,Mystery/Thriller,United States,false
+36,Le petit prince,Antoine de Saint-Exupéry,1943,96,Fantasy,YA|Adventure,France,false
+38,Verity,Colleen Hoover,2018,340,Romance,Mystery/Thriller|Literary Fiction,United States,false
+39,The Seven Husbands of Evelyn Hugo,Taylor Jenkins Reid,2017,400,Romance,Non-Fiction/Biography|Literary Fiction,United States,false
+40,Metamorphosis,Franz Kafka,1915,88,Classics,Fantasy|YA,Czech Republic,false
+41,The Picture of Dorian Gray,Oscar Wilde,1890,246,Classics,Horror|Fantasy,Ireland,false
+43,"Red, White & Royal Blue",Casey McQuiston,2019,440,Romance,YA|Literary Fiction,United States,false
+44,Fahrenheit 451,Ray Bradbury,1953,190,Horror,Sci-Fi|Dystopian,United States,false
+45,"Frankenstein; or, The Modern Prometheus",Mary Shelley,1818,240,Horror,Classics|Sci-Fi,United Kingdom,false
+46,Dracula,Bram Stoker,1897,384,Horror,Classics|Mystery/Thriller,Ireland,false
+47,Dune,Frank Herbert,1965,608,Sci-Fi,Non-Fiction/Biography|Classics,United States,true
+48,Little Women,Louisa May Alcott,1848,422,Literary Fiction,Historical Fiction|YA,United States,false
+49,Charlotte's Web,E. B. White,1952,184,YA,Fantasy,United States,false
+50,A Little Life,Hanya Yanagihara,2008,784,Literary Fiction,Classics,United States,false
+51,The Fault in Our Stars,John Green,2010,315,YA,,United States,false
+52,The Great Gatsby,F. Scott Fitzgerald,1920,185,Classics,Romance|YA,United States,false
+53,Hamlet,William Shakespeare,1603,188,Classics,Historical Fiction|YA,United Kingdom,false
+54,Brave New World,Aldous Huxley,1932,241,Dystopian,Non-Fiction/Biography|Sci-Fi,United Kingdom,false
+55,A Court of Thorns and Roses,Sarah J. Maas,2013,454,Fantasy,YA|Romance,United States,false
+56,Twisted Hate,Ana Huang,2022,520,Romance,,United States,false
+57,The Adventures of Sherlock Holmes [12 stories],Arthur Conan Doyle,1892,309,Mystery/Thriller,Classics|Philosophy,United Kingdom,true
+58,The Power of Now,Eckhart Tolle,1997,224,Philosophy,Non-Fiction/Biography,Canada,false
+59,Adventures of Huckleberry Finn,Mark Twain,1876,346,YA,Classics|Satire,United States,false
+60,Hunting Adeline,H. D. Carlton,2021,685,Romance,Horror|Mystery/Thriller,United States,false
+62,A Christmas Carol,Charles Dickens,1843,114,Horror,YA|Classics,United Kingdom,false
+63,L’étranger,Albert Camus,1942,143,Mystery/Thriller,Adventure|Historical Fiction,France,false
+65,The Shining,Stephen King,1977,506,Horror,Mystery/Thriller|Fantasy,United States,false
+66,I'm Glad My Mom Died,Jennette McCurdy,2022,320,Non-Fiction/Biography,Romance|Literary Fiction,United States,false
+67,The Da Vinci Code,Dan Brown,2003,489,Mystery/Thriller,Adventure|Historical Fiction,United States,false
+68,Lord of the Flies,William Golding,1954,243,Adventure,Philosophy|Mystery/Thriller,United Kingdom,false
+69,The Song of Achilles,Madeline Miller,2011,386,Historical Fiction,Classics|Fantasy,United States,false
+70,Wonder,R. J. Palacio,2001,368,YA,,United States,false
+71,A Tale of Two Cities,Charles Dickens,1800,388,Historical Fiction,Classics|YA,United Kingdom,false
+72,The Eye of the World,Robert Jordan,1990,782,Fantasy,Horror|Sci-Fi,United States,true
+73,Meditations,Marcus Aurelius,1626,203,Philosophy,Non-Fiction/Biography|Classics,Ancient Rome,false
+74,Lolita,Vladimir Nabokov,1777,336,Romance,YA|Literary Fiction,Russia,false
+75,The Scarlet Letter,Nathaniel Hawthorne,1800,272,Historical Fiction,Literary Fiction|Classics,United States,false
+77,The Prince,Niccolò Machiavelli,1515,156,Philosophy,Non-Fiction/Biography|Classics,Republic of Florence,false
+78,The Wonderful Wizard of Oz,L. Frank Baum,1899,159,Fantasy,YA|Classics,United States,false
+79,"Heartstopper, Volume 1",Alice Oseman,2018,288,YA,,United Kingdom,true
+80,The Handmaid's Tale,Margaret Atwood,1985,352,Dystopian,Fantasy|Romance,Canada,false
+81,The Catcher in the Rye,J. D. Salinger,1945,240,YA,Classics|Sci-Fi,United States,false
+82,Emma,Jane Austen,1815,457,Literary Fiction,Classics|Historical Fiction,United Kingdom,false
+83,Matilda,Roald Dahl,1988,240,YA,Satire,United Kingdom,false
+84,Fourth Wing,Rebecca Yarros,2023,522,Fantasy,Romance|YA,United States,false
+85,Better Than the Movies,Lynn Painter,2021,368,YA,Literary Fiction|Romance,United States,false
+86,Charlie and the Chocolate Factory,Roald Dahl,1964,174,YA,Fantasy|Satire,United Kingdom,false
+87,Moby Dick,Herman Melville,1851,453,Adventure,Classics|Sci-Fi,United States,false
+90,Misery,Stephen King,1978,382,Horror,Mystery/Thriller|Classics,United States,false
+91,Coraline,Neil Gaiman,2001,176,YA,Fantasy|Horror,United Kingdom,false
+92,Carrie,Stephen King,1974,255,Horror,Mystery/Thriller|Fantasy,United States,false
+93,The Giver,Lois Lowry,1993,200,YA,Dystopian|Sci-Fi,United States,false
+94,Sense and Sensibility,Jane Austen,1811,352,Romance,Classics|Satire,United Kingdom,false
+95,Treasure Island,Robert Louis Stevenson,1880,248,Adventure,YA|Classics,United Kingdom,false
+97,The Kite Runner,Khaled Hosseini,2003,371,Literary Fiction,,Afghanistan,false
+98,A Brief History of Time,Stephen Hawking,1988,241,Sci-Fi,Mystery/Thriller,United Kingdom,false
+99,The Hate U Give,Angie Thomas,2017,448,YA,Mystery/Thriller,United States,false
+100,The Secret Garden,Frances Hodgson Burnett,1911,256,YA,Classics|Fantasy,United States,false
+101,The Time Machine,H. G. Wells,1895,120,Sci-Fi,Classics|Dystopian,United Kingdom,false
+102,Jane Eyre,Charlotte Brontë,1847,480,Romance,Classics|Horror,United Kingdom,false
+103,Het Achterhuis,Anne Frank,1944,285,Historical Fiction,Non-Fiction/Biography,Germany,false
+104,The Book Thief,Markus Zusak,1998,556,Historical Fiction,,Australia,false
+105,The Fellowship of the Ring,J.R.R. Tolkien,1954,492,Fantasy,YA|Adventure,United Kingdom,false
+106,Robinson Crusoe,Daniel Defoe,1686,274,Adventure,YA|Historical Fiction,Kingdom of Great Britain,false
+107,The Lord of the Rings,J.R.R. Tolkien,1954,1193,Fantasy,Classics,United Kingdom,true
+108,Powerless,Lauren Roberts,2023,528,Fantasy,Romance,New Zealand,false
+109,The Perks of Being a Wallflower,Stephen Chbosky,1999,231,YA,Literary Fiction,United States,false
+111,Culpa mía,Mercedes Ron,2014,416,Romance,Mystery/Thriller|YA,Spain,false
+112,Where the Crawdads Sing,Delia Owens,2018,416,Mystery/Thriller,Literary Fiction|Romance,United States,false
+113,Of Mice and Men,John Steinbeck,1937,119,Literary Fiction,Classics|Non-Fiction/Biography,United States,false
+114,Anne of Green Gables,Lucy Maud Montgomery,1908,309,YA,Historical Fiction|Classics,Canada,true
+115,嫌われる勇気,Ichirō Kishimi,2013,280,Non-Fiction/Biography,Philosophy|Romance,Japan,false
+116,And Then There Were None,Agatha Christie,1939,222,Mystery/Thriller,,United Kingdom,false
+117,Great Expectations,Charles Dickens,1861,482,Classics,Literary Fiction|Historical Fiction,United Kingdom,false
+118,Gulliver's Travels,Jonathan Swift,1726,278,Adventure,Classics|Dystopian,Ireland,false
+119,The Hitchhiker's Guide to the Galaxy,Douglas Adams,1979,216,Sci-Fi,Non-Fiction/Biography|Satire,United States,true
+120,The Bell Jar,Sylvia Plath,1948,262,Non-Fiction/Biography,Literary Fiction|Classics,United States,false
+121,Анна Каренина,Leo Tolstoy,1876,660,Classics,Romance|Historical Fiction,Russia,false
+122,The Call of the Wild,Jack London,1903,128,Adventure,Classics|YA,United States,false
+123,Catching Fire,Suzanne Collins,2009,400,Adventure,Dystopian|Fantasy,United States,false
+124,The Lost Hero,Rick Riordan,2010,556,Fantasy,Adventure|YA,United States,false
+125,A Midsummer Night's Dream,William Shakespeare,1600,124,Classics,Fantasy|Romance,United Kingdom,false
+126,Holes,Louis Sachar,1988,240,YA,,United States,false
+128,The Four Agreements,Don Miguel Ruiz,1997,152,Philosophy,Non-Fiction/Biography,Mexico,false
+127,Le Comte de Monte-Cristo,Alexandre Dumas,1830,599,Historical Fiction,Adventure|Literary Fiction,France,false
+129,Six of Crows,Leigh Bardugo,2015,512,Fantasy,Mystery/Thriller|YA,United States,true
+130,Punk 57,Penelope Douglas,2016,363,Romance,YA|Mystery/Thriller,United States,false
+131,Wings of Fire,A. P. J. Abdul Kalam,1999,180,Non-Fiction/Biography,,India,false
+132,Othello,William Shakespeare,1622,176,Classics,Romance|Historical Fiction,United Kingdom,false
+133,The Maze Runner,James Dashner,2009,375,Dystopian,YA|Sci-Fi,United States,true
+134,The Sea of Monsters,Rick Riordan,2005,282,Adventure,Fantasy|Horror,United States,false
+135,The Outsiders,S. E. Hinton,1967,192,YA,Literary Fiction,United States,false
+136,Milk and Honey,Rupi Kaur,2014,226,Romance,Adventure,Canada,false
+137,Cien años de soledad,Gabriel García Márquez,1967,432,Fantasy,,Colombia,false
+138,The Midnight Library,Matt Haig,2020,304,Sci-Fi,Fantasy|Non-Fiction/Biography,United Kingdom,false
+139,Hatchet,Gary Paulsen,1986,192,YA,Adventure,United States,false
+140,Divergent,Veronica Roth,2010,487,Dystopian,Sci-Fi|YA,United States,true
+141,Dog Man,Dav Pilkey,2015,240,Mystery/Thriller,YA|Satire,Spain,false
+142,Steve Jobs,Walter Isaacson,2011,664,Non-Fiction/Biography,Historical Fiction,United States,false
+143,Foundation,Isaac Asimov,1951,240,Sci-Fi,Non-Fiction/Biography|Literary Fiction,United States,true
+144,They Both Die at the End,Adam Silvera,2017,373,YA,Adventure|Romance,United States,false
+145,To All the Boys I've Loved Before,Jenny Han,2014,377,YA,Romance|Literary Fiction,United States,false
+146,The Adventures of Tom Sawyer,Mark Twain,1817,253,YA,Historical Fiction|Classics,United States,false
+147,A Study in Scarlet,Arthur Conan Doyle,1887,162,Mystery/Thriller,Classics|Adventure,United Kingdom,false
+148,The Housemaid,Freida McFadden,2022,336,Mystery/Thriller,Romance,United States,true
+149,Throne of Glass,Sarah J. Maas,2012,432,Fantasy,Mystery/Thriller|YA,United States,false
+150,Ender's Game,Orson Scott Card,1985,330,Sci-Fi,Non-Fiction/Biography,United States,true
+151,Angels & Demons,Dan Brown,2000,575,Mystery/Thriller,Horror|Adventure,United States,false
+152,Julius Caesar,William Shakespeare,1656,136,Classics,Historical Fiction|Non-Fiction/Biography,United Kingdom,false
+153,The Spanish Love Deception,Elena Armas,2021,480,Romance,Satire,Spain,false
+154,Tuesdays with Morrie,Mitch Albom,1994,199,Non-Fiction/Biography,Philosophy|Romance,United States,false
+155,Things Fall Apart,Chinua Achebe,1958,192,Literary Fiction,Historical Fiction,Nigeria,false
+156,Persuasion,Jane Austen,1789,268,Romance,Classics|Literary Fiction,United Kingdom,false
+157,Murder on the Orient Express,Agatha Christie,1933,240,Mystery/Thriller,,United Kingdom,false
+158,The Titan's Curse,Rick Riordan,2007,320,Fantasy,YA|Horror,United States,false
+159,"Good Girl, Bad Blood",Holly Jackson,2020,416,YA,Mystery/Thriller|Romance,Canada,false
+160,The Strange Case of Dr. Jekyll and Mr. Hyde,Robert Louis Stevenson,1875,131,Horror,Fantasy|Classics,United Kingdom,false
+161,"I, Robot",Isaac Asimov,1950,245,Sci-Fi,Non-Fiction/Biography|Mystery/Thriller,United States,false
+162,Madame Bovary,Gustave Flaubert,1856,351,Classics,Literary Fiction|Historical Fiction,France,false
+163,American Psycho,Bret Easton Ellis,1991,477,Literary Fiction,Horror|Mystery/Thriller,United States,false
+164,The Secret History,Donna Tartt,1992,608,Mystery/Thriller,Literary Fiction|Classics,United States,false
+165,"The Lion, the Witch and the Wardrobe",C. S. Lewis,1950,186,Fantasy,Adventure|YA,United Kingdom,true
+167,The Hound of the Baskervilles,Arthur Conan Doyle,1900,207,Mystery/Thriller,Classics|Non-Fiction/Biography,United Kingdom,false
+168,The Wind in the Willows,Kenneth Grahame,1908,192,YA,Fantasy|Classics,United Kingdom,false
+169,The Color Purple,Alice Walker,1976,262,Literary Fiction,,United States,false
+170,The Mysterious Affair at Styles,Agatha Christie,1920,204,Mystery/Thriller,Classics,United Kingdom,false
+171,The Eyes of Darkness,Dean Koontz,1981,341,Mystery/Thriller,Horror,United States,false
+172,Fire & Blood,George R. R. Martin,2014,840,Fantasy,Adventure|Historical Fiction,United States,false
+173,Mein Kampf,Adolf Hitler,1922,615,Non-Fiction/Biography,Historical Fiction|Classics,Austria,false
+174,The Curious Incident of the Dog in the Night-Time,Mark Haddon,2002,256,Mystery/Thriller,YA,United Kingdom,false
+175,Red Queen,Victoria Aveyard,2015,428,Fantasy,YA|Romance,United States,false
+176,Through the Looking-Glass,Lewis Carroll,1865,134,YA,Fantasy|Classics,United Kingdom,false
+178,Me Before You,Jojo Moyes,2012,492,Romance,,United Kingdom,false
+180,Normal People,Sally Rooney,2018,304,Romance,Literary Fiction|Classics,Ireland,false
+181,Harry Potter and the Cursed Child,Jack Thorne,2001,336,Fantasy,,United Kingdom,true
+182,Ready Player One,Ernest Cline,2008,462,Dystopian,Sci-Fi|YA,United States,false
+183,The Deal,Elle Kennedy,2000,390,Romance,,Canada,false
+185,Jurassic Park,Michael Crichton,1990,455,Sci-Fi,Mystery/Thriller|Non-Fiction/Biography,United States,false
+184,La Divina Commedia,Dante Alighieri,1472,503,Classics,Philosophy|Sci-Fi,Italy,false
+186,The Name of the Wind,Patrick Rothfuss,2007,736,Fantasy,Mystery/Thriller|Adventure,United States,false
+187,Looking for Alaska,John Green,2005,288,YA,,United States,false
+188,The Two Towers,J.R.R. Tolkien,1954,434,Fantasy,,United Kingdom,false
+189,The BFG,Roald Dahl,1980,208,YA,Fantasy|Adventure,United Kingdom,false
+191,Heart of Darkness,Joseph Conrad,1899,136,Classics,Mystery/Thriller|Romance,United Kingdom,false
+192,Slaughterhouse-Five,Kurt Vonnegut,1956,203,Historical Fiction,Classics|Literary Fiction,United States,false
+193,Mockingjay,Suzanne Collins,2010,424,Adventure,YA|Dystopian,United States,false
+194,The Duke and I,Julia Quinn,2000,432,Romance,Historical Fiction,United States,false
+195,Der Proceß,Franz Kafka,1825,269,Dystopian,Classics|Literary Fiction,Czech Republic,false
+196,Eragon,Christopher Paolini,2000,576,Fantasy,Adventure|YA,United States,false
+197,Elon Musk,Ashlee Vance,2013,396,Non-Fiction/Biography,Sci-Fi,United States,false
+198,Beloved,Toni Morrison,1987,321,Historical Fiction,,United States,false
+199,The Martian,Andy Weir,2011,407,Sci-Fi,Non-Fiction/Biography|Adventure,United Kingdom,false
+200,A Wrinkle in Time,Madeleine L'Engle,1962,212,Sci-Fi,YA|Classics,United States,false
+201,James and the Giant Peach,Roald Dahl,1961,144,Fantasy,YA,United Kingdom,false
+202,πολιτεία,Plato,1554,397,Philosophy,Dystopian|Non-Fiction/Biography,Classical Athens,false
+204,Candide,Voltaire,1746,152,Philosophy,Classics|Satire,France,false
+207,The Boy in the Striped Pyjamas,John Boyne,2006,216,Historical Fiction,YA|Adventure,Ireland,false
+208,We Were Liars,E. Lockhart,2014,240,YA,Literary Fiction,United States,false
+209,The Final Empire,Brandon Sanderson,2001,669,Fantasy,Adventure,United States,true
+210,Walden,Henry David Thoreau,1854,270,Non-Fiction/Biography,Philosophy|Classics,United States,false
+211,Alice's Adventures in Wonderland / Through the Looking Glass,Lewis Carroll,1881,272,YA,Adventure|Classics,United Kingdom,false
+212,The Cat in the Hat,Dr. Seuss,1957,63,YA,Fantasy,United States,false
+213,The Grapes of Wrath,John Steinbeck,1939,544,Classics,Historical Fiction|Literary Fiction,United States,false
+216,The Inheritance Games,Jennifer Lynn Barnes,2020,392,YA,Mystery/Thriller|Romance,United States,false
+217,Lights Out,Navessa Allen,2024,416,Romance,Mystery/Thriller,United States,false
+218,Catch-22,Joseph Heller,1961,463,Historical Fiction,Satire|Non-Fiction/Biography,United States,false
+219,Project Hail Mary,Andy Weir,2021,496,Sci-Fi,Adventure|Non-Fiction/Biography,United Kingdom,false
+220,Siddhartha,Hermann Hesse,1922,139,Philosophy,Classics|Fantasy,Germany,false
+221,Unravel me,Tahereh Mafi,2013,443,YA,Sci-Fi|Romance,United States,false
+222,We'll Always Have Summer,Jenny Han,2011,297,Romance,YA,United States,false
+223,Les Misérables,Victor Hugo,1862,520,Historical Fiction,Classics|Literary Fiction,France,false
+224,The Ballad of Songbirds and Snakes,Suzanne Collins,2020,528,YA,Adventure|Sci-Fi,United States,false
+225,Dubliners,James Joyce,1914,240,Classics,,Ireland,false
+226,Cadáver exquisito,Agustina Bazterrica,2015,228,Dystopian,Horror|Sci-Fi,Argentina,false
+227,East of Eden,John Steinbeck,1952,611,Literary Fiction,Classics|Historical Fiction,United States,false
+228,The Sign of Four,Arthur Conan Doyle,1889,156,Mystery/Thriller,Classics|Literary Fiction,United Kingdom,false
+229,In Cold Blood,Truman Capote,1965,352,Mystery/Thriller,Non-Fiction/Biography,United States,false
+230,Romancing Mister Bridgerton,Julia Quinn,2002,396,Romance,Literary Fiction|Classics,United States,true
+231,The God of Small Things,Arundhati Roy,1997,357,Literary Fiction,Romance,India,false
+232,All the Light We Cannot See,Anthony Doerr,2014,544,Historical Fiction,YA,United States,false
+235,The Jungle,Upton Sinclair,1791,350,Historical Fiction,Classics,United States,false
+237,Gone Girl,Gillian Flynn,2011,475,Mystery/Thriller,,United States,false
+239,Manifest der Kommunistischen Partei,Karl Marx,1848,89,Non-Fiction/Biography,Classics|Philosophy,Russia,false
+240,Credence,Penelope Douglas,2020,523,Romance,Classics,United States,false
+241,Ignite Me,Tahereh Mafi,2014,416,YA,Sci-Fi|Romance,United States,false
+242,Northern Lights,Philip Pullman,1995,405,Fantasy,YA|Adventure,United Kingdom,true
+243,Flatland,Edwin Abbott Abbott,1884,110,Sci-Fi,Classics|Historical Fiction,United Kingdom,false
+244,Les trois Mousquetaires,Alexandre Dumas,1844,555,Adventure,Historical Fiction|Classics,France,false
+245,A short history of nearly everything,Bill Bryson,2003,592,Non-Fiction/Biography,Philosophy|Historical Fiction,United States,false
+247,Call Me by Your Name,André Aciman,2007,256,Romance,YA|Literary Fiction,United States,false
+248,I Know Why the Caged Bird Sings,Maya Angelou,1969,281,Non-Fiction/Biography,Literary Fiction|YA,United States,false
+250,The God Delusion,Richard Dawkins,2001,450,Philosophy,Non-Fiction/Biography,United Kingdom,false
+252,The A.B.C. Murders,Agatha Christie,1936,227,Mystery/Thriller,,United Kingdom,false
+254,Hard Times,Charles Dickens,1854,326,Literary Fiction,Classics,United Kingdom,false
+255,Good Omens,Terry Pratchett,1990,400,Fantasy,Horror,United Kingdom,false
+256,The Road,Cormac McCarthy,2006,256,Adventure,Dystopian|Literary Fiction,United States,false
+257,The Hired Girl,Laura Amy Schlitz,2015,400,Historical Fiction,YA,United States,false
+258,Howl's Moving Castle,Diana Wynne Jones,1986,304,Fantasy,YA,United Kingdom,false
+259,Never Lie,Freida McFadden,2022,328,Mystery/Thriller,,United States,false
+261,The Moonstone,Wilkie Collins,1800,448,Mystery/Thriller,Classics|Historical Fiction,United Kingdom,false
+262,The Autobiography of Benjamin Franklin,Benjamin Franklin,1791,214,Non-Fiction/Biography,Historical Fiction|Classics,United States,false
+263,Flowers for Algernon,Daniel Keyes,1966,274,Sci-Fi,YA|Non-Fiction/Biography,United States,false
+264,Diary of a Wimpy Kid,Jeff Kinney,2009,224,Literary Fiction,Classics|YA,United States,true
+265,"After (After Series, Book 1)",Anna Todd,2014,592,Romance,,United States,true
+267,Caraval,Stephanie Garber,2000,436,Romance,YA|Fantasy,United States,false
+268,King Solomon's Mines,H. Rider Haggard,1876,222,Adventure,Classics|YA,United Kingdom,false
+269,Bumi Manusia,Pramoedya Ananta Toer,1972,360,Historical Fiction,Non-Fiction/Biography,Indonesia,false
+270,A Clockwork Orange,Anthony Burgess,1962,192,Satire,Sci-Fi|Dystopian,United Kingdom,false
+271,The Immortals of Meluha,Amish Tripathi,2010,416,Fantasy,,India,false
+272,Narrative of the life of Frederick Douglass,Frederick Douglass,1845,127,Non-Fiction/Biography,Historical Fiction|Classics,United States,false
+275,Life of Pi,Yann Martel,2000,349,Adventure,Philosophy|Romance,Canada,false
+277,Number the Stars,Lois Lowry,1901,147,Historical Fiction,YA|Classics,United States,false
+278,Ulysses,James Joyce,1914,736,Literary Fiction,Classics|Historical Fiction,Ireland,false
+283,Carmilla,Sheridan Le Fanu,1871,90,Horror,Fantasy|Mystery/Thriller,British Empire,false
+284,Outlander,Diana Gabaldon,1991,672,Romance,Historical Fiction|Sci-Fi,United States,true
+285,Maus I,Art Spiegelman,1986,295,Non-Fiction/Biography,Historical Fiction,United States,false
+287,Women in Love,D. H. Lawrence,1877,538,Classics,Romance|Fantasy,United Kingdom,false
+289,Jenseits von Gut und Böse,Friedrich Nietzsche,1885,178,Philosophy,Non-Fiction/Biography|Classics,Germany,false
+288,The Way of Kings,Brandon Sanderson,2010,1008,Fantasy,Classics,United States,true
+290,Inferno,Dante Alighieri,1767,307,Historical Fiction,Classics,Italy,false
+291,Interview With the Vampire,Anne Rice,1672,349,Horror,Classics,United States,false
+294,Twelve years a slave,Solomon Northup,1853,234,Historical Fiction,Non-Fiction/Biography|Classics,United States,false
+296,The Silver Eyes (Five Nights At Freddy's #1),Scott Cawthon,2001,400,Adventure,Horror|YA,United States,true
+297,Once Upon a Broken Heart,Stephanie Garber,2021,416,Fantasy,YA|Romance,United States,true
+302,The Help,Kathryn Stockett,2009,487,Literary Fiction,Historical Fiction,United States,false
+303,As Good As Dead,Holly Jackson,2021,504,Mystery/Thriller,YA,Canada,false
+306,Do Androids Dream of Electric Sheep?,Philip K. Dick,1968,224,Sci-Fi,Non-Fiction/Biography|Adventure,United States,false
+308,Eclipse,Stephenie Meyer,2006,629,Horror,YA,United States,false
+310,Ethan Frome,Edith Wharton,1910,98,Classics,Literary Fiction|Romance,United States,false
+315,Gone With the Wind,Margaret Mitchell,1936,922,Historical Fiction,Adventure|Literary Fiction,United States,false
+316,Leonardo,Leonardo da Vinci,1946,140,Classics,,Republic of Florence,false
+321,Sofies verden,Jostein Gaarder,1991,523,Philosophy,YA|Historical Fiction,Norway,false
+323,The Prophet,Kahlil Gibran,1923,112,Classics,Philosophy,Ottoman Empire,false
+324,Leaves of Grass,Walt Whitman,1855,384,Classics,Historical Fiction|Non-Fiction/Biography,United States,false
+327,Im Westen nichts Neues,Erich Maria Remarque,1928,248,Historical Fiction,Classics,Germany,false
+328,The Woman in White,Wilkie Collins,1800,526,Mystery/Thriller,Classics|Literary Fiction,United Kingdom,false
+329,Red Rising,Pierce Brown,2014,442,Dystopian,Fantasy|YA,United States,true
+331,The Canterbury Tales,Geoffrey Chaucer,1478,427,Classics,YA|Historical Fiction,Kingdom of England,false
+332,The Godfather,Mario Puzo,1969,450,Mystery/Thriller,Romance|Literary Fiction,United States,false
+333,Das Parfum,Patrick Süskind,1985,263,Mystery/Thriller,Historical Fiction|YA,Germany,false
+334,Does It Hurt?,H. D. Carlton,2022,431,Mystery/Thriller,Romance,United States,false
+335,Watchmen,Alan Moore,1986,421,Sci-Fi,Mystery/Thriller|Non-Fiction/Biography,United Kingdom,false
+337,Breaking Dawn,Stephenie Meyer,2000,756,Horror,YA|Fantasy,United States,true
+340,Le Tour du Monde en Quatre-Vingts Jours,Jules Verne,1872,225,Adventure,YA|Non-Fiction/Biography,France,false
+343,Neuromancer,William Gibson,1984,317,Sci-Fi,Non-Fiction/Biography,Canada,false
+345,Paradise Lost,John Milton,1667,333,Classics,Non-Fiction/Biography|Historical Fiction,Kingdom of England,false
+346,House of Leaves,Mark Z. Danielewski,1998,736,Mystery/Thriller,Horror|Fantasy,United States,false
+350,The Lost Symbol,Dan Brown,2009,604,Mystery/Thriller,Historical Fiction|Adventure,United States,false
+351,Das Kapital,Karl Marx,1867,579,Non-Fiction/Biography,Philosophy|Historical Fiction,Russia,false
+352,When Breath Becomes Air,Paul Kalanithi,2016,232,Non-Fiction/Biography,Philosophy,United States,false
+354,Blood Meridian,Cormac McCarthy,1985,354,Adventure,Historical Fiction,United States,false
+356,Mrs. Dalloway,Virginia Woolf,1925,224,Literary Fiction,Classics,United Kingdom,false
+357,The Thirty-Nine Steps,John Buchan,1915,116,Mystery/Thriller,Adventure|Historical Fiction,United Kingdom,false
+362,Picasso,Pablo Picasso,1926,107,Classics,,Spain,false
+363,Uncle Tom's Cabin,Harriet Beecher Stowe,1850,451,Classics,YA|Historical Fiction,United States,false
+366,I Have No Mouth and I Must Scream,Harlan Ellison,1972,178,Sci-Fi,Non-Fiction/Biography,United States,false
+367,Never Let Me Go,Kazuo Ishiguro,2005,319,Sci-Fi,Non-Fiction/Biography|Classics,United Kingdom,false
+368,The Last of the Mohicans,James Fenimore Cooper,1826,418,Historical Fiction,Classics|Adventure,United States,false
+371,The Pilgrim's Progress,John Bunyan,1678,308,Classics,Non-Fiction/Biography,Kingdom of England,false
+373,Forbidden knowledge,Roger Shattuck,1996,369,Mystery/Thriller,Non-Fiction/Biography|Historical Fiction,United States,false
+374,Also sprach Zarathustra,Friedrich Nietzsche,1883,354,Philosophy,Classics,Germany,false
+375,La sombra del viento,Carlos Ruiz Zafón,2001,528,Mystery/Thriller,Literary Fiction,Spain,false
+377,Contact,Carl Sagan,1985,432,Sci-Fi,Non-Fiction/Biography|Adventure,United States,false
+378,Dune Messiah,Frank Herbert,1969,279,Non-Fiction/Biography,Sci-Fi,United States,true
+379,On The Road,Jack Kerouac,1957,310,Classics,Historical Fiction,United States,false
+381,A Room of One's Own,Virginia Woolf,1929,143,Historical Fiction,,United Kingdom,false
+382,A Gentleman in Moscow,Amor Towles,2016,511,Historical Fiction,Literary Fiction,United States,false
+383,Destroy Me,Tahereh Mafi,2012,106,Dystopian,Sci-Fi|Romance,United States,false
+385,A Portrait of the Artist as a Young Man,James Joyce,1818,252,Literary Fiction,Classics,Ireland,false
+388,To the Lighthouse,Virginia Woolf,1927,242,Literary Fiction,Romance|Classics,United Kingdom,false
+389,Vingt mille lieues sous les mers,Jules Verne,1870,325,Adventure,YA|Sci-Fi,France,false
+396,The Haunting of Hill House,Shirley Jackson,1959,246,Horror,Literary Fiction,United States,false
+398,Fight Club,Chuck Palahniuk,1996,222,Sci-Fi,Non-Fiction/Biography|Adventure,United States,false
+399,The Martian Chronicles,Ray Bradbury,1950,262,Sci-Fi,Non-Fiction/Biography,United States,true
+400,Le Deuxième Sexe,Simone de Beauvoir,1949,728,Non-Fiction/Biography,Philosophy|Classics,France,false
+401,Il nome della rosa,Umberto Eco,1980,533,Historical Fiction,Mystery/Thriller,Italy,false
+403,The Pillars of the Earth,Ken Follett,1989,1040,Historical Fiction,Mystery/Thriller,France,false
+405,Confessions,Augustine of Hippo,1482,351,Non-Fiction/Biography,Classics|Philosophy,Ancient Rome,false
+406,Parable of the Sower,Octavia E. Butler,1993,320,Sci-Fi,Dystopian|Non-Fiction/Biography,United States,false
+409,Shoe Dog,Phil Knight,2014,386,Non-Fiction/Biography,Historical Fiction,United States,false
+410,Born a Crime,Trevor Noah,2016,304,Non-Fiction/Biography,Satire|Historical Fiction,South Africa,false
+413,The Silence of the Lambs,Thomas Harris,1988,352,Mystery/Thriller,Non-Fiction/Biography|Horror,United States,false
+414,Our Fault,Mercedes Ron,2014,448,Mystery/Thriller,Romance|YA,Spain,false
+416,My Ántonia,Willa Cather,1818,264,Classics,Romance|Adventure,United States,false
+418,The Turn of the Screw,Henry James,1898,160,Horror,Classics|Fantasy,United States,false
+419,Culpa Tuya,Mercedes Ron,2016,448,Literary Fiction,,Spain,false
+423,The Nightingale,Kristin Hannah,2000,560,Historical Fiction,Romance,United States,false
+425,Metamorphoses,Ovid,1479,394,Classics,Fantasy|Historical Fiction,Ancient Rome,false
+426,The Goldfinch,Donna Tartt,2013,862,Literary Fiction,Adventure|Mystery/Thriller,United States,false
+430,The Bluest Eye,Toni Morrison,1970,181,Literary Fiction,,United States,false
+432,Decamerone,Giovanni Boccaccio,1516,574,Historical Fiction,Classics,Republic of Florence,false
+433,2001,Arthur C. Clarke,1968,237,Sci-Fi,Non-Fiction/Biography|Classics,United Kingdom,false
+435,A Connecticut Yankee in King Arthur's Court,Mark Twain,1889,397,Historical Fiction,Sci-Fi|YA,United States,false
+436,The Awakening,Kate Chopin,1899,214,Literary Fiction,Classics|Romance,United States,false
+438,The Importance of Being Earnest,Oscar Wilde,1893,102,Satire,Classics|Romance,Ireland,false
+440,Cinder,Marissa Meyer,2011,416,Sci-Fi,YA|Fantasy,United States,false
+441,Atlas Shrugged (Centennial Ed. HC),Ayn Rand,1936,1096,Adventure,Sci-Fi|Philosophy,United States,false
+442,Deception Point,Dan Brown,2001,559,Mystery/Thriller,Non-Fiction/Biography|Adventure,United States,false
+443,Tess of the d'Urbervilles,Thomas Hardy,1707,457,Classics,Mystery/Thriller|Romance,United Kingdom,false
+444,Vincent van Gogh,Vincent van Gogh,1914,116,Non-Fiction/Biography,Classics|Historical Fiction,Netherlands,false
+449,"The Alchemist, 1612",Ben Jonson,1612,208,Classics,Satire,Kingdom of England,false
+450,Maybe You Should Talk to Someone,Lori Gottlieb,2019,433,Non-Fiction/Biography,Romance|Literary Fiction,United States,false
+452,The Crucible,Arthur Miller,1953,151,Historical Fiction,Fantasy,United States,false
+453,Orlando,Virginia Woolf,1928,226,Historical Fiction,Classics,United Kingdom,false
+455,For Whom the Bell Tolls,Ernest Hemingway,1940,480,Historical Fiction,Classics,United States,false
+459,Voyage au Centre de la Terre,Jules Verne,1867,244,Adventure,Sci-Fi|Non-Fiction/Biography,France,false
+463,The King in Yellow,Robert W. Chambers,1895,228,Classics,Horror|Fantasy,United States,false
+464,La chute,Albert Camus,1917,147,Philosophy,Classics|Literary Fiction,France,false
+465,Go Ask Alice,Beatrice Sparks,1971,185,Non-Fiction/Biography,YA,United States,false
+467,Hyperion,Dan Simmons,1989,481,Sci-Fi,Non-Fiction/Biography|Adventure,United States,false
+468,World War Z,Max Brooks,2006,422,Horror,Adventure|Historical Fiction,United States,false
+469,The Wealth of Nations,Adam Smith,1776,590,Non-Fiction/Biography,Historical Fiction|Classics,Kingdom of Great Britain,false
+473,Snow Crash,Neal Stephenson,1992,460,Sci-Fi,Fantasy|Non-Fiction/Biography,United States,false
+476,The Jewel of Seven Stars,Bram Stoker,1902,228,Horror,Classics|Sci-Fi,Ireland,false
+479,Le fantôme de l'opéra,Gaston Leroux,1911,276,Horror,Literary Fiction|Classics,France,false
+480,The House of Mirth,Edith Wharton,1905,348,Classics,Literary Fiction|Romance,United States,false
+482,Sula,Toni Morrison,1973,174,Literary Fiction,Mystery/Thriller|YA,United States,false
+485,The Exorcist,William Peter Blatty,1971,400,Horror,Mystery/Thriller,United States,false
+489,A Princess of Mars,Edgar Rice Burroughs,1912,176,Sci-Fi,Non-Fiction/Biography|Classics,United States,false
+490,The Red Badge of Courage,Stephen Crane,1855,174,Historical Fiction,Classics|Mystery/Thriller,United States,false
+554,The Iron Heel,Jack London,1907,287,Dystopian,Classics|Sci-Fi,United States,false
+562,The Screwtape Letters,C. S. Lewis,1942,160,Satire,Philosophy,United Kingdom,false
+577,Herland,Charlotte Perkins Gilman,1915,152,Dystopian,Classics|Horror,United States,false
+630,One Flew Over the Cuckoo's Nest,Ken Kesey,1962,311,Satire,Literary Fiction|Classics,United States,false
+820,Bridget Jones's Diary,Helen Fielding,1996,310,Satire,Romance,United Kingdom,false
+1023,Breakfast of Champions,Kurt Vonnegut,1973,302,Satire,Sci-Fi|Classics,United States,false
+1056,The Mouse and the Motorcycle,Beverly Cleary,1965,158,Satire,YA,United States,false
+1068,Satyricon,Petronius,1575,234,Satire,Historical Fiction|Classics,Ancient Rome,false
+1185,Voyage au bout de la nuit,Louis-Ferdinand Céline,1932,509,Satire,Classics|Historical Fiction,France,false
+1206,By The Great Horn Spoon,Sid Fleischman,1963,193,Satire,YA|Historical Fiction,United States,false
+1208,Tono-Bungay,H. G. Wells,1890,399,Satire,Classics|Sci-Fi,United Kingdom,false

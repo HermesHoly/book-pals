@@ -1,0 +1,39 @@
+{
+  "name": "book-pals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "typecheck": "npx tsc --noEmit",
+    "ci": "npm run typecheck && npm run build",
+    "pages:dev": "npm run build && npx wrangler pages dev",
+    "fetch:ol": "npx tsx scripts/fetch-openlibrary.ts",
+    "clean:data": "npx tsx scripts/clean-metadata.ts",
+    "normalize:genres": "npx tsx scripts/normalize-genres.ts",
+    "enrich:meta": "npx tsx scripts/enrich-metadata.ts",
+    "validate:data": "npx tsx scripts/validate-dataset.ts",
+    "curate:pool": "npx tsx scripts/curate-pool.ts",
+    "export:audit": "npx tsx scripts/export-audit-csv.ts",
+    "build:schedule": "npx tsx scripts/build-schedule.ts",
+    "build:public": "npx tsx scripts/build-public-books.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.161.0"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.18.2",
+    "tailwindcss": "^3.4.19",
+    "zod": "^4.6.7"
+  }
+}
