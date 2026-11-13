@@ -19,21 +19,78 @@ import "../styles/board.css";
             📚
           </span>
           <div class="min-w-0">
-            <h1 class="truncate text-base sm:text-lg font-bold tracking-tight text-zinc-100">Book Pals</h1>
-            <p class="truncate text-[11px] sm:text-xs text-zinc-400">Daily Literary Deduction</p>
+            <div class="flex items-center gap-2">
+              <h1 class="truncate text-base sm:text-lg font-bold tracking-tight text-zinc-100">Book Pals</h1>
+              <span id="mode-pill" class="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
+                Daily
+              </span>
+            </div>
+            <p class="truncate text-[11px] sm:text-xs text-zinc-400">
+              Next puzzle in <span id="midnight-countdown" class="font-mono text-zinc-300">--:--:--</span>
+            </p>
           </div>
         </div>
         <div class="flex shrink-0 items-center gap-1.5 sm:gap-2">
-          <span id="puzzle-badge" class="rounded-full bg-[#18181b] border border-zinc-800 px-2.5 py-1 text-[11px] sm:text-xs font-medium text-zinc-300">
-            Puzzle #1
+          <button
+            id="back-to-daily-btn"
+            type="button"
+            class="hidden rounded-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 px-2.5 py-1 text-[11px] sm:text-xs font-medium text-zinc-200 transition"
+          >
+            Today
+          </button>
+          <button
+            id="open-reveal-btn"
+            type="button"
+            class="hidden rounded-full bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 px-2.5 py-1 text-[11px] sm:text-xs font-semibold text-emerald-300 transition"
+          >
+            Result
+          </button>
+          <span id="puzzle-badge" class="hidden sm:inline-block rounded-full bg-[#18181b] border border-zinc-800 px-2.5 py-1 text-xs font-medium text-zinc-300">
+            #1
           </span>
           <span id="guess-counter" class="rounded-full bg-blue-600/15 border border-blue-500/30 px-2.5 py-1 text-[11px] sm:text-xs font-semibold text-blue-400">
             0 / 6
           </span>
+          <button
+            id="stats-btn"
+            type="button"
+            aria-label="Statistics"
+            title="Statistics"
+            class="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs text-zinc-300 transition"
+          >
+            📊
+          </button>
+          <button
+            id="contrast-btn"
+            type="button"
+            aria-label="Toggle high-contrast colorblind mode"
+            title="High-Contrast Mode"
+            class="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs text-zinc-300 transition"
+          >
+            👁️
+          </button>
+          <button
+            id="sound-btn"
+            type="button"
+            aria-label="Toggle sound effects"
+            title="Sound Effects"
+            class="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs text-zinc-300 transition"
+          >
+            🔊
+          </button>
+          <button
+            id="help-btn"
+            type="button"
+            aria-label="How to play"
+            title="How to play"
+            class="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs font-bold text-zinc-300 transition"
+          >
+            ?
+          </button>
         </div>
       </header>
 
-      <!-- Search Combobox Section (text-base on mobile prevents iOS Safari input zoom) -->
+      <!-- Search Combobox Section -->
       <section class="relative mt-4 sm:mt-6" aria-label="Book search">
         <div class="relative flex items-center">
           <svg
@@ -68,7 +125,7 @@ import "../styles/board.css";
           </button>
         </div>
 
-        <!-- Dropdown Results (large 44px+ mobile touch targets) -->
+        <!-- Dropdown Results -->
         <ul
           id="book-search-listbox"
           role="listbox"
@@ -93,18 +150,11 @@ import "../styles/board.css";
       <!-- Error / Status Toast -->
       <div id="status-banner" class="hidden mt-3.5 rounded-2xl border px-4 py-3 text-xs font-medium"></div>
 
-      <!-- Win / Loss End-of-Round Card -->
-      <section
-        id="round-outcome-card"
-        class="hidden mt-4 sm:mt-5 rounded-2xl border p-4 sm:p-5 shadow-2xl transition-all"
-        aria-live="polite"
-      ></section>
-
       <!-- 6-Row Guess Board with Sticky Book Column -->
       <section class="mt-4 sm:mt-6 flex-1" aria-label="Guess history board">
         <div class="mb-1.5 flex items-center justify-between sm:hidden text-[11px] text-zinc-500">
           <span>Swipe columns →</span>
-          <span>6 Guesses</span>
+          <span id="mobile-puzzle-label">Puzzle #1</span>
         </div>
 
         <div class="overflow-x-auto pb-2 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
@@ -124,19 +174,110 @@ import "../styles/board.css";
           </div>
         </div>
 
-        <!-- Legend -->
-        <div class="mt-3.5 sm:mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] sm:text-xs text-zinc-400">
-          <span class="flex items-center gap-1.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500/80 ring-2 ring-emerald-500/30"></span> Exact Match
-          </span>
-          <span class="flex items-center gap-1.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-amber-500/80 ring-2 ring-amber-500/30"></span> Close (±10 yrs / ±15% pgs / Shared genre)
-          </span>
-          <span class="flex items-center gap-1.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-zinc-700 ring-2 ring-zinc-700/40"></span> Miss
-          </span>
-        </div>
+        <!-- Dynamic Legend (updates for Colorblind Mode) -->
+        <div id="board-legend" class="mt-3.5 sm:mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] sm:text-xs text-zinc-400"></div>
       </section>
+    </div>
+
+    <!-- Post-Game Cover & Blurb Reveal Modal -->
+    <div
+      id="reveal-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reveal-modal-title"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/80 backdrop-blur-md p-4 overflow-y-auto"
+    >
+      <div class="relative my-auto w-full max-w-lg rounded-3xl bg-[#18181b] border border-zinc-800 p-5 sm:p-6 shadow-2xl">
+        <button
+          id="close-reveal-btn"
+          type="button"
+          aria-label="Close reveal modal"
+          class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-800/90 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-100"
+        >
+          ✕
+        </button>
+
+        <div id="reveal-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Player Statistics & Guess Distribution Modal -->
+    <div
+      id="stats-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="stats-modal-title"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/80 backdrop-blur-md p-4"
+    >
+      <div class="relative w-full max-w-md rounded-3xl bg-[#18181b] border border-zinc-800 p-5 sm:p-6 shadow-2xl space-y-5">
+        <div class="flex items-center justify-between">
+          <h2 id="stats-modal-title" class="text-lg font-bold text-zinc-100">Your Statistics</h2>
+          <button
+            id="close-stats-btn"
+            type="button"
+            aria-label="Close statistics"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-800/90 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-100"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div id="stats-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- How to Play Tutorial Modal -->
+    <div
+      id="howto-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="howto-modal-title"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/80 backdrop-blur-md p-4"
+    >
+      <div class="relative w-full max-w-md rounded-3xl bg-[#18181b] border border-zinc-800 p-5 sm:p-6 shadow-2xl space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 id="howto-modal-title" class="text-lg font-bold text-zinc-100">How to Play Book Pals</h2>
+          <button
+            id="close-howto-btn"
+            type="button"
+            aria-label="Close instructions"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-800/90 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-100"
+          >
+            ✕
+          </button>
+        </div>
+
+        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+          Deduce today's secret book in <strong class="text-white">6 guesses or fewer</strong>. Every guess compares five literary clues against the hidden title:
+        </p>
+
+        <ul class="space-y-2.5 text-xs text-zinc-300">
+          <li class="flex items-start gap-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80 p-2.5">
+            <span class="rounded-md bg-emerald-500/20 border border-emerald-500/40 px-2 py-0.5 font-semibold text-emerald-300">EXACT</span>
+            <span>Attribute matches the hidden book identically.</span>
+          </li>
+          <li class="flex items-start gap-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80 p-2.5">
+            <span class="rounded-md bg-amber-500/20 border border-amber-500/40 px-2 py-0.5 font-semibold text-amber-300">CLOSE</span>
+            <span>Within <strong>±10 years</strong>, within <strong>±15% pages</strong>, or shares a secondary genre.</span>
+          </li>
+          <li class="flex items-start gap-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80 p-2.5">
+            <span class="rounded-md bg-zinc-800 border border-zinc-700 px-2 py-0.5 font-mono font-bold text-zinc-200">⬆️ / ⬇️</span>
+            <span>Indicates whether the target book is <strong>newer / longer (⬆️)</strong> or <strong>older / shorter (⬇️)</strong>.</span>
+          </li>
+          <li class="flex items-start gap-2.5 rounded-xl bg-blue-600/10 border border-blue-500/30 p-2.5">
+            <span class="text-sm">💡</span>
+            <span>After <strong>3 misses</strong>, the first letter of the author's surname unlocks automatically.</span>
+          </li>
+        </ul>
+
+        <button
+          id="start-playing-btn"
+          type="button"
+          class="w-full rounded-full bg-blue-600 py-2.5 text-xs font-semibold text-white shadow-lg transition hover:bg-blue-500"
+        >
+          Got it — Let's Play
+        </button>
+      </div>
     </div>
 
     <!-- Embed compressed public search catalog -->
@@ -145,10 +286,22 @@ import "../styles/board.css";
     <script>
       import { searchBooks, type PublicBookTuple, type SearchResult } from "../lib/search";
       import type { GuessComparisonResult, Direction } from "../lib/comparison";
-
-      type GameStatus = "IN_PROGRESS" | "WON" | "LOST";
+      import {
+        getLocalDateKey,
+        getTimeUntilNextMidnight,
+        getTodayPuzzleNumber,
+        loadDailyState,
+        saveDailyState,
+        type GameStatus,
+      } from "../lib/storage";
+      import { buildShareText, shareOrCopyResult } from "../lib/share";
+      import { loadPlayerStats, recordDailyOutcome } from "../lib/stats";
+      import { playTileFlipPop, playWinFanfare } from "../lib/audio";
 
       const MAX_GUESSES = 6;
+      const TUTORIAL_SEEN_KEY = "bookpals_tutorial_seen_v1";
+      const CONTRAST_PREF_KEY = "bookpals_high_contrast_v1";
+      const MUTE_PREF_KEY = "bookpals_muted_v1";
 
       const catalogEl = document.getElementById("books-catalog-data");
       const catalog: PublicBookTuple[] = catalogEl ? JSON.parse(catalogEl.textContent || "[]") : [];
@@ -157,21 +310,53 @@ import "../styles/board.css";
       const listbox = document.getElementById("book-search-listbox") as HTMLUListElement;
       const clearBtn = document.getElementById("clear-search-btn") as HTMLButtonElement;
       const puzzleBadgeEl = document.getElementById("puzzle-badge") as HTMLElement;
+      const mobilePuzzleLabelEl = document.getElementById("mobile-puzzle-label") as HTMLElement;
+      const modePillEl = document.getElementById("mode-pill") as HTMLElement;
+      const backToDailyBtn = document.getElementById("back-to-daily-btn") as HTMLButtonElement;
+      const openRevealBtn = document.getElementById("open-reveal-btn") as HTMLButtonElement;
+      const countdownEl = document.getElementById("midnight-countdown") as HTMLElement;
       const counterEl = document.getElementById("guess-counter") as HTMLElement;
       const boardRowsEl = document.getElementById("guess-board-rows") as HTMLElement;
+      const legendEl = document.getElementById("board-legend") as HTMLElement;
       const statusBannerEl = document.getElementById("status-banner") as HTMLElement;
       const hintBannerEl = document.getElementById("author-hint-banner") as HTMLElement;
       const hintTextEl = document.getElementById("author-hint-text") as HTMLElement;
-      const outcomeCardEl = document.getElementById("round-outcome-card") as HTMLElement;
 
-      let puzzleNumber = 1;
+      const contrastBtn = document.getElementById("contrast-btn") as HTMLButtonElement;
+      const soundBtn = document.getElementById("sound-btn") as HTMLButtonElement;
+      const statsBtn = document.getElementById("stats-btn") as HTMLButtonElement;
+
+      const revealModal = document.getElementById("reveal-modal") as HTMLElement;
+      const revealModalBody = document.getElementById("reveal-modal-body") as HTMLElement;
+      const closeRevealBtn = document.getElementById("close-reveal-btn") as HTMLButtonElement;
+
+      const statsModal = document.getElementById("stats-modal") as HTMLElement;
+      const statsModalBody = document.getElementById("stats-modal-body") as HTMLElement;
+      const closeStatsBtn = document.getElementById("close-stats-btn") as HTMLButtonElement;
+
+      const howtoModal = document.getElementById("howto-modal") as HTMLElement;
+      const helpBtn = document.getElementById("help-btn") as HTMLButtonElement;
+      const closeHowtoBtn = document.getElementById("close-howto-btn") as HTMLButtonElement;
+      const startPlayingBtn = document.getElementById("start-playing-btn") as HTMLButtonElement;
+
+      let puzzleNumber = getTodayPuzzleNumber();
+      let isPracticeMode = false;
       let gameStatus: GameStatus = "IN_PROGRESS";
       let authorHintLetter: string | null = null;
+      let revealedAnswer: GuessComparisonResult["revealedAnswer"] | null = null;
       const guessedIds = new Set<number>();
       const guesses: GuessComparisonResult[] = [];
       let currentResults: SearchResult[] = [];
       let activeIndex = -1;
       let isSubmitting = false;
+
+      let highContrast = false;
+      let isMuted = false;
+
+      try {
+        highContrast = window.localStorage.getItem(CONTRAST_PREF_KEY) === "1";
+        isMuted = window.localStorage.getItem(MUTE_PREF_KEY) === "1";
+      } catch {}
 
       function escapeHtml(str: string): string {
         return str
@@ -182,6 +367,16 @@ import "../styles/board.css";
       }
 
       function tileClasses(status: "exact" | "close" | "partial" | "miss"): string {
+        if (highContrast) {
+          if (status === "exact") {
+            return "bg-[#132238] border-sky-400/70 text-sky-100 shadow-[0_0_15px_rgba(56,189,248,0.16)]";
+          }
+          if (status === "close" || status === "partial") {
+            return "bg-[#331d10] border-orange-400/70 text-orange-100 shadow-[0_0_15px_rgba(251,146,60,0.16)]";
+          }
+          return "bg-[#18181b] border-zinc-800 text-zinc-300";
+        }
+
         if (status === "exact") {
           return "bg-[#142922] border-emerald-500/50 text-emerald-200 shadow-[0_0_15px_rgba(16,185,129,0.12)]";
         }
@@ -197,9 +392,67 @@ import "../styles/board.css";
         return "";
       }
 
+      function renderLegendAndAccessibilityButtons() {
+        contrastBtn.className = highContrast
+          ? "flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-sky-500/20 border border-sky-400/60 text-xs text-sky-200 transition"
+          : "flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs text-zinc-300 transition";
+
+        soundBtn.textContent = isMuted ? "🔇" : "🔊";
+        soundBtn.className = isMuted
+          ? "flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] border border-zinc-800 text-xs text-zinc-500 transition"
+          : "flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#18181b] hover:bg-zinc-800 border border-zinc-700/80 text-xs text-zinc-300 transition";
+
+        const exactDot = highContrast
+          ? "bg-sky-400 ring-sky-400/30"
+          : "bg-emerald-500/80 ring-emerald-500/30";
+        const closeDot = highContrast
+          ? "bg-orange-400 ring-orange-400/30"
+          : "bg-amber-500/80 ring-amber-500/30";
+
+        legendEl.innerHTML = `
+          <span class="flex items-center gap-1.5">
+            <span class="h-2.5 w-2.5 rounded-full ${exactDot} ring-2"></span> Exact Match
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="h-2.5 w-2.5 rounded-full ${closeDot} ring-2"></span> Close (±10 yrs / ±15% pgs / Shared genre)
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="h-2.5 w-2.5 rounded-full bg-zinc-700 ring-2 ring-zinc-700/40"></span> Miss
+          </span>
+        `;
+      }
+
+      function persistCurrentDailyState() {
+        if (isPracticeMode) return;
+        saveDailyState({
+          puzzleNumber,
+          dateKey: getLocalDateKey(),
+          guesses: [...guesses],
+          gameStatus,
+          authorHintLetter,
+          revealedAnswer,
+          updatedAt: new Date().toISOString(),
+        });
+      }
+
       function updateControlsForState() {
-        puzzleBadgeEl.textContent = `Puzzle #${puzzleNumber}`;
+        puzzleBadgeEl.textContent = `#${puzzleNumber}`;
+        mobilePuzzleLabelEl.textContent = `Puzzle #${puzzleNumber}`;
         counterEl.textContent = `${guesses.length} / ${MAX_GUESSES}`;
+
+        if (isPracticeMode) {
+          modePillEl.textContent = "Practice";
+          modePillEl.className =
+            "rounded-full bg-amber-500/15 border border-amber-500/30 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-300";
+          backToDailyBtn.classList.remove("hidden");
+        } else {
+          modePillEl.textContent = "Daily";
+          modePillEl.className =
+            "rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300";
+          backToDailyBtn.classList.add("hidden");
+        }
+
+        openRevealBtn.classList.toggle("hidden", gameStatus === "IN_PROGRESS" || !revealedAnswer);
 
         if (authorHintLetter) {
           hintTextEl.innerHTML = `Hint Unlocked: Author's surname starts with <strong class="rounded bg-blue-500/25 px-1.5 py-0.5 font-mono text-sm text-white">${escapeHtml(authorHintLetter)}</strong>`;
@@ -216,16 +469,110 @@ import "../styles/board.css";
           input.placeholder =
             gameStatus === "WON"
               ? `Solved in ${guesses.length}/${MAX_GUESSES} guesses!`
-              : "Out of guesses — see the hidden book below.";
+              : "Out of guesses — click Result above to inspect.";
         }
       }
 
-      function renderOutcomeCard(answer: NonNullable<GuessComparisonResult["revealedAnswer"]>) {
-        const isWin = gameStatus === "WON";
-        outcomeCardEl.className = isWin
-          ? "mt-4 sm:mt-5 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-4 sm:p-5 shadow-2xl"
-          : "mt-4 sm:mt-5 rounded-2xl border border-zinc-700 bg-[#18181b] p-4 sm:p-5 shadow-2xl";
+      function openStatsModal() {
+        const stats = loadPlayerStats();
+        const winPct =
+          stats.gamesPlayed > 0
+            ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100)
+            : 0;
 
+        const maxBucket = Math.max(
+          1,
+          ...Object.values(stats.distribution)
+        );
+        const latestWinningTurn =
+          !isPracticeMode && gameStatus === "WON" ? guesses.length : null;
+
+        const barsHtml = ([1, 2, 3, 4, 5, 6] as const)
+          .map((turn) => {
+            const count = stats.distribution[turn] || 0;
+            const widthPct = Math.max(8, Math.round((count / maxBucket) * 100));
+            const isHighlighted = latestWinningTurn === turn;
+            const barColor = isHighlighted
+              ? highContrast
+                ? "bg-sky-500 text-zinc-950 font-bold"
+                : "bg-emerald-500 text-zinc-950 font-bold"
+              : "bg-zinc-700 text-zinc-100 font-semibold";
+
+            return `
+              <div class="flex items-center gap-2.5 text-xs">
+                <span class="w-3 font-mono font-bold text-zinc-400">${turn}</span>
+                <div class="flex-1 rounded-full bg-zinc-900/90 p-0.5">
+                  <div
+                    style="width: ${widthPct}%"
+                    class="flex items-center justify-end rounded-full px-2.5 py-0.5 text-[11px] font-mono transition-all ${barColor}"
+                  >
+                    ${count}
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        statsModalBody.innerHTML = `
+          <div class="space-y-5">
+            <div class="grid grid-cols-4 gap-2 text-center">
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <div class="text-xl font-bold font-mono text-zinc-100">${stats.gamesPlayed}</div>
+                <div class="mt-0.5 text-[10px] uppercase tracking-wider text-zinc-400">Played</div>
+              </div>
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <div class="text-xl font-bold font-mono text-zinc-100">${winPct}%</div>
+                <div class="mt-0.5 text-[10px] uppercase tracking-wider text-zinc-400">Win %</div>
+              </div>
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <div class="text-xl font-bold font-mono text-blue-400">${stats.currentStreak}</div>
+                <div class="mt-0.5 text-[10px] uppercase tracking-wider text-zinc-400">Streak</div>
+              </div>
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <div class="text-xl font-bold font-mono text-emerald-400">${stats.maxStreak}</div>
+                <div class="mt-0.5 text-[10px] uppercase tracking-wider text-zinc-400">Max</div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                Guess Distribution
+              </h3>
+              <div class="space-y-1.5">
+                ${barsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+
+        statsModal.classList.remove("hidden");
+      }
+
+      async function fetchOpenLibraryBlurb(workKey?: string): Promise<string> {
+        if (!workKey || !workKey.startsWith("/works/")) {
+          return "A celebrated work from the Book Pals literary catalog.";
+        }
+        try {
+          const res = await fetch(`https://openlibrary.org${workKey}.json`);
+          if (!res.ok) throw new Error("OL fetch failed");
+          const data = await res.json();
+          const rawDesc =
+            typeof data.description === "string"
+              ? data.description
+              : data.description?.value;
+          if (!rawDesc) {
+            return "Explore editions, reader reviews, and subject tags on Open Library.";
+          }
+          const cleaned = rawDesc.replace(/\s+/g, " ").trim();
+          return cleaned.length > 240 ? `${cleaned.slice(0, 237)}...` : cleaned;
+        } catch {
+          return "Explore editions, reader reviews, and subject tags on Open Library.";
+        }
+      }
+
+      async function openRevealModal(answer: NonNullable<GuessComparisonResult["revealedAnswer"]>) {
+        const isWin = gameStatus === "WON";
         const badgeText = isWin
           ? `🎉 Solved in ${guesses.length} / ${MAX_GUESSES}`
           : "📖 Better luck next time";
@@ -233,48 +580,148 @@ import "../styles/board.css";
           ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
           : "bg-zinc-800 text-zinc-300 border-zinc-700";
 
-        outcomeCardEl.innerHTML = `
-          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div class="space-y-1">
-              <span class="inline-block rounded-full border px-3 py-0.5 text-xs font-semibold ${badgeColor}">
+        const coverUrl = answer.coverId
+          ? `https://covers.openlibrary.org/b/id/${answer.coverId}-M.jpg`
+          : null;
+
+        const olWorkUrl = answer.openLibraryKey
+          ? `https://openlibrary.org${answer.openLibraryKey}`
+          : `https://openlibrary.org/search?q=${encodeURIComponent(answer.title)}`;
+
+        const shareText = buildShareText({
+          puzzleNumber,
+          guesses,
+          gameStatus,
+          usedHint: Boolean(authorHintLetter),
+          highContrast,
+        });
+
+        revealModalBody.innerHTML = `
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="inline-block rounded-full border px-3 py-1 text-xs font-semibold ${badgeColor}">
                 ${badgeText}
               </span>
-              <h2 class="pt-1 text-lg sm:text-xl font-bold tracking-tight text-zinc-100">${escapeHtml(answer.title)}</h2>
-              <p class="text-xs sm:text-sm text-zinc-300">by <span class="font-semibold text-white">${escapeHtml(answer.author)}</span></p>
-              <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1.5 text-[11px] sm:text-xs text-zinc-400">
-                <span class="rounded-lg bg-zinc-900/90 border border-zinc-800 px-2.5 py-1">📅 ${answer.firstPublishYear}</span>
-                <span class="rounded-lg bg-zinc-900/90 border border-zinc-800 px-2.5 py-1">📄 ${answer.medianPages} pages</span>
-                <span class="rounded-lg bg-zinc-900/90 border border-zinc-800 px-2.5 py-1">🏷️ ${escapeHtml(answer.primaryGenre)}</span>
-                <span class="rounded-lg bg-zinc-900/90 border border-zinc-800 px-2.5 py-1">🌍 ${escapeHtml(answer.authorCountry)}</span>
-                <span class="rounded-lg bg-zinc-900/90 border border-zinc-800 px-2.5 py-1">${answer.isSeries ? "📚 Series" : "📕 Standalone"}</span>
+              <button
+                id="reveal-open-stats-btn"
+                type="button"
+                class="rounded-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-200 transition"
+              >
+                📊 Stats
+              </button>
+            </div>
+
+            <div class="flex gap-4 items-start">
+              ${
+                coverUrl
+                  ? `<img
+                      src="${coverUrl}"
+                      alt="Cover of ${escapeHtml(answer.title)}"
+                      class="h-32 w-22 sm:h-36 sm:w-24 shrink-0 rounded-xl border border-zinc-700/80 object-cover bg-zinc-900 shadow-lg"
+                      onerror="this.style.display='none'"
+                    />`
+                  : `<div class="flex h-32 w-22 sm:h-36 sm:w-24 shrink-0 flex-col items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 p-2 text-center text-[10px] text-zinc-400">
+                      <span class="text-xl mb-1">📕</span>
+                      <span>${escapeHtml(answer.primaryGenre)}</span>
+                    </div>`
+              }
+
+              <div class="min-w-0 flex-1 space-y-1">
+                <h2 id="reveal-modal-title" class="text-lg sm:text-xl font-bold leading-snug text-zinc-100">
+                  ${escapeHtml(answer.title)}
+                </h2>
+                <p class="text-xs sm:text-sm text-zinc-300">
+                  by <span class="font-semibold text-white">${escapeHtml(answer.author)}</span>
+                </p>
+                <div class="flex flex-wrap gap-1.5 pt-1.5 text-[11px] text-zinc-300">
+                  <span class="rounded-lg bg-zinc-900 border border-zinc-800 px-2 py-0.5">📅 ${answer.firstPublishYear}</span>
+                  <span class="rounded-lg bg-zinc-900 border border-zinc-800 px-2 py-0.5">📄 ${answer.medianPages}p</span>
+                  <span class="rounded-lg bg-zinc-900 border border-zinc-800 px-2 py-0.5">🏷️ ${escapeHtml(answer.primaryGenre)}</span>
+                  <span class="rounded-lg bg-zinc-900 border border-zinc-800 px-2 py-0.5">🌍 ${escapeHtml(answer.authorCountry)}</span>
+                  <span class="rounded-lg bg-zinc-900 border border-zinc-800 px-2 py-0.5">${answer.isSeries ? "📚 Series" : "📕 Standalone"}</span>
+                </div>
               </div>
             </div>
-            <button
-              id="next-test-puzzle-btn"
-              type="button"
-              class="min-h-[42px] shrink-0 rounded-full bg-blue-600 px-5 py-2.5 text-xs font-semibold text-white shadow-lg transition hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              Play Puzzle #${puzzleNumber + 1} →
-            </button>
+
+            <p id="reveal-blurb-text" class="rounded-2xl bg-zinc-900/90 border border-zinc-800/90 p-3 text-xs leading-relaxed text-zinc-300">
+              Loading synopsis from Open Library...
+            </p>
+
+            <!-- Spoiler-Safe Emoji Share Box -->
+            <div class="rounded-2xl bg-zinc-950/90 border border-zinc-800 p-3.5 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">Spoiler-Free Share Card</span>
+                <span id="share-feedback-badge" class="hidden text-[11px] font-semibold text-emerald-400">✓ Copied to clipboard!</span>
+              </div>
+              <pre class="overflow-x-auto font-mono text-xs leading-relaxed text-zinc-200 select-all">${escapeHtml(shareText)}</pre>
+              <button
+                id="share-result-btn"
+                type="button"
+                class="w-full rounded-full bg-emerald-600 hover:bg-emerald-500 py-2.5 text-xs font-semibold text-white shadow-lg transition flex items-center justify-center gap-2"
+              >
+                <span>📤</span>
+                <span>Share Result</span>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between border-t border-zinc-800 pt-3 text-[11px] text-zinc-400">
+              <a
+                href="${olWorkUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline decoration-zinc-600 hover:text-zinc-200"
+              >
+                Via Open Library ↗
+              </a>
+              <button
+                id="modal-practice-next-btn"
+                type="button"
+                class="rounded-full bg-blue-600 px-4 py-2 text-xs font-semibold text-white shadow transition hover:bg-blue-500"
+              >
+                Practice #${puzzleNumber + 1} →
+              </button>
+            </div>
           </div>
         `;
 
-        const nextBtn = document.getElementById("next-test-puzzle-btn");
-        nextBtn?.addEventListener("click", () => {
-          startPuzzle(puzzleNumber + 1);
+        revealModal.classList.remove("hidden");
+
+        document.getElementById("reveal-open-stats-btn")?.addEventListener("click", () => {
+          revealModal.classList.add("hidden");
+          openStatsModal();
         });
+
+        document.getElementById("share-result-btn")?.addEventListener("click", async () => {
+          const status = await shareOrCopyResult(shareText);
+          const badge = document.getElementById("share-feedback-badge");
+          if (badge && (status === "copied" || status === "shared")) {
+            badge.textContent = status === "shared" ? "✓ Shared!" : "✓ Copied to clipboard!";
+            badge.classList.remove("hidden");
+            setTimeout(() => badge.classList.add("hidden"), 2500);
+          }
+        });
+
+        document.getElementById("modal-practice-next-btn")?.addEventListener("click", () => {
+          revealModal.classList.add("hidden");
+          startPracticePuzzle(puzzleNumber + 1);
+        });
+
+        const blurb = await fetchOpenLibraryBlurb(answer.openLibraryKey);
+        const blurbEl = document.getElementById("reveal-blurb-text");
+        if (blurbEl) blurbEl.textContent = blurb;
       }
 
-      function startPuzzle(nextNumber: number) {
+      function startPracticePuzzle(nextNumber: number) {
+        isPracticeMode = true;
         puzzleNumber = nextNumber;
         gameStatus = "IN_PROGRESS";
         authorHintLetter = null;
+        revealedAnswer = null;
         guessedIds.clear();
         guesses.length = 0;
         currentResults = [];
         activeIndex = -1;
-        outcomeCardEl.className = "hidden";
-        outcomeCardEl.innerHTML = "";
+        revealModal.classList.add("hidden");
         statusBannerEl.classList.add("hidden");
         input.value = "";
         clearBtn.classList.add("hidden");
@@ -282,6 +729,70 @@ import "../styles/board.css";
         updateControlsForState();
         renderBoard(false);
         input.focus();
+      }
+
+      function hydrateDailyPuzzle() {
+        isPracticeMode = false;
+        puzzleNumber = getTodayPuzzleNumber();
+        guessedIds.clear();
+        guesses.length = 0;
+        currentResults = [];
+        activeIndex = -1;
+        revealModal.classList.add("hidden");
+        statusBannerEl.classList.add("hidden");
+        input.value = "";
+        clearBtn.classList.add("hidden");
+        closeDropdown();
+
+        const saved = loadDailyState(puzzleNumber);
+        if (saved) {
+          gameStatus = saved.gameStatus;
+          authorHintLetter = saved.authorHintLetter;
+          revealedAnswer = saved.revealedAnswer;
+          for (const g of saved.guesses) {
+            guesses.push(g);
+            guessedIds.add(g.guess.id);
+          }
+          // Backfill stats if user already finished today's puzzle earlier
+          if (gameStatus !== "IN_PROGRESS") {
+            recordDailyOutcome(puzzleNumber, gameStatus === "WON", guesses.length);
+          }
+        } else {
+          gameStatus = "IN_PROGRESS";
+          authorHintLetter = null;
+          revealedAnswer = null;
+        }
+
+        updateControlsForState();
+        renderBoard(false);
+
+        if (revealedAnswer && gameStatus !== "IN_PROGRESS") {
+          openRevealModal(revealedAnswer);
+        }
+      }
+
+      function triggerRowFlipAudio(latest: GuessComparisonResult) {
+        const ev = latest.evaluation;
+        const statuses: Array<"exact" | "close" | "partial" | "miss"> = [
+          ev.isCorrect ? "exact" : "miss",
+          ev.year.status,
+          ev.pages.status,
+          ev.genre.status,
+          ev.country.status,
+          ev.series.status,
+        ];
+
+        statuses.forEach((st, colIdx) => {
+          window.setTimeout(() => {
+            playTileFlipPop(colIdx, st, isMuted);
+          }, colIdx * 110);
+        });
+
+        if (ev.isCorrect) {
+          window.setTimeout(() => {
+            playWinFanfare(isMuted);
+          }, 680);
+        }
       }
 
       function renderBoard(animateLatest = false) {
@@ -313,13 +824,11 @@ import "../styles/board.css";
 
           rowsHtml.push(`
             <div class="grid grid-cols-[175px_82px_82px_115px_105px_86px] sm:grid-cols-[2.1fr_1fr_1fr_1.35fr_1.2fr_0.95fr] gap-2">
-              <!-- Sticky Book Title & Author -->
               <div ${delay(0)} class="${flipClass} sticky-book-col flex flex-col justify-center rounded-xl border px-3 py-2 min-w-0 ${tileClasses(bookStatus)}">
                 <div class="truncate text-xs font-bold text-zinc-100" title="${escapeHtml(guess.title)}">${escapeHtml(guess.title)}</div>
                 <div class="truncate text-[11px] text-zinc-400" title="${escapeHtml(guess.author)}">${escapeHtml(guess.author)}</div>
               </div>
 
-              <!-- Publication Year -->
               <div ${delay(1)} class="${flipClass} flex flex-col items-center justify-center rounded-xl border px-2 py-2 text-center ${tileClasses(evaluation.year.status)}">
                 <div class="flex items-center gap-1 text-xs font-bold font-mono">
                   <span>${guess.firstPublishYear}</span>
@@ -328,7 +837,6 @@ import "../styles/board.css";
                 <span class="text-[10px] uppercase tracking-wide opacity-75">${evaluation.year.status}</span>
               </div>
 
-              <!-- Page Count -->
               <div ${delay(2)} class="${flipClass} flex flex-col items-center justify-center rounded-xl border px-2 py-2 text-center ${tileClasses(evaluation.pages.status)}">
                 <div class="flex items-center gap-1 text-xs font-bold font-mono">
                   <span>${guess.medianPages}p</span>
@@ -337,19 +845,16 @@ import "../styles/board.css";
                 <span class="text-[10px] uppercase tracking-wide opacity-75">${evaluation.pages.status}</span>
               </div>
 
-              <!-- Primary Genre -->
               <div ${delay(3)} class="${flipClass} flex flex-col items-center justify-center rounded-xl border px-2 py-2 text-center ${tileClasses(evaluation.genre.status)}">
                 <span class="line-clamp-1 text-xs font-semibold">${escapeHtml(guess.primaryGenre)}</span>
                 <span class="text-[10px] uppercase tracking-wide opacity-75">${evaluation.genre.status}</span>
               </div>
 
-              <!-- Author Country -->
               <div ${delay(4)} class="${flipClass} flex flex-col items-center justify-center rounded-xl border px-2 py-2 text-center ${tileClasses(evaluation.country.status)}">
                 <span class="line-clamp-1 text-xs font-semibold">${escapeHtml(guess.authorCountry)}</span>
                 <span class="text-[10px] uppercase tracking-wide opacity-75">${evaluation.country.status}</span>
               </div>
 
-              <!-- Series Status -->
               <div ${delay(5)} class="${flipClass} flex flex-col items-center justify-center rounded-xl border px-2 py-2 text-center ${tileClasses(evaluation.series.status)}">
                 <span class="text-xs font-semibold">${guess.isSeries ? "Series" : "Standalone"}</span>
                 <span class="text-[10px] uppercase tracking-wide opacity-75">${evaluation.series.status}</span>
@@ -449,14 +954,24 @@ import "../styles/board.css";
             gameStatus = "LOST";
           }
 
-          renderBoard(true);
+          if (comparison.revealedAnswer) {
+            revealedAnswer = comparison.revealedAnswer;
+          }
 
-          if (comparison.revealedAnswer && gameStatus !== "IN_PROGRESS") {
+          persistCurrentDailyState();
+          if (!isPracticeMode && gameStatus !== "IN_PROGRESS") {
+            recordDailyOutcome(puzzleNumber, gameStatus === "WON", guesses.length);
+          }
+
+          renderBoard(true);
+          triggerRowFlipAudio(comparison);
+
+          if (revealedAnswer && gameStatus !== "IN_PROGRESS") {
             setTimeout(() => {
-              if (comparison.revealedAnswer) {
-                renderOutcomeCard(comparison.revealedAnswer);
+              if (revealedAnswer) {
+                openRevealModal(revealedAnswer);
               }
-            }, 700);
+            }, 760);
           }
         } catch {
           statusBannerEl.textContent = "Could not evaluate guess. Make sure Wrangler dev server is running.";
@@ -470,6 +985,47 @@ import "../styles/board.css";
           }
         }
       }
+
+      function startMidnightClock() {
+        const tick = () => {
+          const { hours, minutes, seconds } = getTimeUntilNextMidnight();
+          countdownEl.textContent = `${hours}:${minutes}:${seconds}`;
+
+          const latestDailyNumber = getTodayPuzzleNumber();
+          if (!isPracticeMode && latestDailyNumber !== puzzleNumber) {
+            hydrateDailyPuzzle();
+          }
+        };
+        tick();
+        window.setInterval(tick, 1000);
+      }
+
+      contrastBtn.addEventListener("click", () => {
+        highContrast = !highContrast;
+        try {
+          window.localStorage.setItem(CONTRAST_PREF_KEY, highContrast ? "1" : "0");
+        } catch {}
+        renderLegendAndAccessibilityButtons();
+        renderBoard(false);
+        if (!revealModal.classList.contains("hidden") && revealedAnswer) {
+          openRevealModal(revealedAnswer);
+        }
+      });
+
+      soundBtn.addEventListener("click", () => {
+        isMuted = !isMuted;
+        try {
+          window.localStorage.setItem(MUTE_PREF_KEY, isMuted ? "1" : "0");
+        } catch {}
+        renderLegendAndAccessibilityButtons();
+        if (!isMuted) playTileFlipPop(2, "exact", false);
+      });
+
+      statsBtn.addEventListener("click", () => openStatsModal());
+      closeStatsBtn.addEventListener("click", () => statsModal.classList.add("hidden"));
+      statsModal.addEventListener("click", (e) => {
+        if (e.target === statsModal) statsModal.classList.add("hidden");
+      });
 
       input.addEventListener("input", () => {
         const q = input.value;
@@ -514,14 +1070,43 @@ import "../styles/board.css";
         input.focus();
       });
 
+      backToDailyBtn.addEventListener("click", () => hydrateDailyPuzzle());
+      openRevealBtn.addEventListener("click", () => {
+        if (revealedAnswer) openRevealModal(revealedAnswer);
+      });
+      closeRevealBtn.addEventListener("click", () => revealModal.classList.add("hidden"));
+      revealModal.addEventListener("click", (e) => {
+        if (e.target === revealModal) revealModal.classList.add("hidden");
+      });
+
+      const closeHowto = () => {
+        howtoModal.classList.add("hidden");
+        try {
+          window.localStorage.setItem(TUTORIAL_SEEN_KEY, "1");
+        } catch {}
+      };
+      helpBtn.addEventListener("click", () => howtoModal.classList.remove("hidden"));
+      closeHowtoBtn.addEventListener("click", closeHowto);
+      startPlayingBtn.addEventListener("click", closeHowto);
+      howtoModal.addEventListener("click", (e) => {
+        if (e.target === howtoModal) closeHowto();
+      });
+
       document.addEventListener("click", (e) => {
         if (!input.contains(e.target as Node) && !listbox.contains(e.target as Node)) {
           closeDropdown();
         }
       });
 
-      updateControlsForState();
-      renderBoard(false);
+      renderLegendAndAccessibilityButtons();
+      hydrateDailyPuzzle();
+      startMidnightClock();
+
+      try {
+        if (!window.localStorage.getItem(TUTORIAL_SEEN_KEY)) {
+          howtoModal.classList.remove("hidden");
+        }
+      } catch {}
     </script>
   </body>
 </html>

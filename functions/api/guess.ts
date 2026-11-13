@@ -9,6 +9,7 @@ import {
 interface LockedAnswerRecord {
   puzzleNumber: number;
   bookId: number;
+  openLibraryKey?: string;
   title: string;
   author: string;
   firstPublishYear: number;
@@ -29,6 +30,7 @@ const answersByPuzzle = new Map<number, BookAttributes>(
     a.puzzleNumber,
     {
       id: a.bookId,
+      openLibraryKey: a.openLibraryKey,
       title: a.title,
       author: a.author,
       firstPublishYear: a.firstPublishYear,
@@ -75,7 +77,6 @@ export const onRequestPost: PagesFunction = async (context) => {
     return jsonResponse({ error: "Turn must be between 1 and 6." }, 400);
   }
 
-  // Wrap puzzleNumber seamlessly across the 365-day Year 1 schedule
   const totalPuzzles = answersByPuzzle.size;
   const normalizedPuzzle = ((puzzleNumber - 1) % totalPuzzles) + 1;
 
